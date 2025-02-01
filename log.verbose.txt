@@ -1,0 +1,496 @@
+Project settings changed, reconfiguring...
+creating /home/x/i/v/repro/cabal-bug/dist-newstyle
+creating /home/x/i/v/repro/cabal-bug/dist-newstyle/cache
+Configuration is affected by the following files:
+- cabal.project
+Compiler settings changed, reconfiguring...
+Running: /nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/ghc --numeric-version
+looking for tool ghc-pkg near compiler in
+/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin
+found ghc-pkg in
+/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/ghc-pkg-9.8.4
+Running: /nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/ghc-pkg-9.8.4 --version
+Running: /nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/ghc --supported-languages
+Running: /nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/ghc --info
+Running: /nix/store/591apldfgm1gr238rbfc8ib0y1z8ng2y-gcc-wrapper-14-20241116/bin/cc -dumpversion
+looking for tool haddock near compiler in
+/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin
+found haddock in
+/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/haddock-ghc-9.8.4
+Running: /nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/haddock-ghc-9.8.4 --version
+looking for tool hpc near compiler in
+/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin
+found hpc in
+/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/hpc-ghc-9.8.4
+Running: /nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/hpc-ghc-9.8.4 version
+looking for tool hsc2hs near compiler in
+/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin
+found hsc2hs in
+/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/hsc2hs-ghc-9.8.4
+Running: /nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/hsc2hs-ghc-9.8.4 --version
+Running: /nix/store/xxwkjlfikd5q8nnpyysnx4dla8r54w56-binutils-wrapper-2.43.1/bin/ld.gold --help
+Running: /nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/ghc -hide-all-packages -c /tmp/nix-shell-906376-0/nix-shell-1160499-0/1167595-1.c -o /tmp/nix-shell-906376-0/nix-shell-1160499-0/1167595-2.o
+Running: /nix/store/xxwkjlfikd5q8nnpyysnx4dla8r54w56-binutils-wrapper-2.43.1/bin/ld.gold -x -r /tmp/nix-shell-906376-0/nix-shell-1160499-0/1167595-2.o -o /tmp/nix-shell-906376-0/nix-shell-1160499-0/1167595-3.o
+looking for tool runghc near compiler in
+/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin
+found runghc in
+/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/runghc-9.8.4
+Running: /nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/runghc-9.8.4 --version
+Running: /nix/store/s6zpdhyi00867afvsyg8hf54q5llkffl-gnutar-1.35/bin/tar --help
+Running: /nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/ghc --print-global-package-db
+Reading available packages of hackage.haskell.org...
+Using most recent state specified from most recent cabal update
+index-state(hackage.haskell.org) = 2025-02-01T00:44:31Z
+Warning: Failed to query pkg-config, Cabal will backtrack if a package from
+pkg-config is requested. Error message: cannot find pkg-config program
+Resolving dependencies...
+Component graph for foo-0.1.0.0:
+    component lib:y
+    component lib:x
+    component lib:z
+        dependency lib:x
+        dependency lib:y
+component foo-0.1.0.0-inplace-y include base-4.19.2.0-inplace
+unit foo-0.1.0.0-inplace-y
+    include base-4.19.2.0-inplace
+    Y=foo-0.1.0.0-inplace-y:Y
+component foo-0.1.0.0-inplace-x include base-4.19.2.0-inplace
+unit foo-0.1.0.0-inplace-x
+    include base-4.19.2.0-inplace
+    X=foo-0.1.0.0-inplace-x:X
+component foo-0.1.0.0-inplace-z
+    include base-4.19.2.0-inplace
+    include foo-0.1.0.0-inplace-x
+    include foo-0.1.0.0-inplace-y
+unit foo-0.1.0.0-inplace-z
+    include base-4.19.2.0-inplace
+    include foo-0.1.0.0-inplace-x
+    include foo-0.1.0.0-inplace-y
+    Z=foo-0.1.0.0-inplace-z:Z
+Build profile: -w ghc-9.8.4 -O1
+In order, the following will be built:
+ - foo-0.1.0.0 (interactive) (lib:x) (first run)
+ - foo-0.1.0.0 (lib:y) (first run)
+ - foo-0.1.0.0 (interactive) (lib:z) (first run)
+Executing install plan in parallel using Just 24 threads.
+creating /home/x/i/v/repro/cabal-bug/dist-newstyle/build
+creating /home/x/i/v/repro/cabal-bug/dist-newstyle/tmp
+creating /home/x/i/v/repro/cabal-bug/dist-newstyle/packagedb
+Running: /nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/ghc-pkg-9.8.4 init /home/x/i/v/repro/cabal-bug/dist-newstyle/packagedb/ghc-9.8.4
+creating dist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l/x
+creating dist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l
+creating dist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0
+creating dist-newstyle/build/x86_64-linux/ghc-9.8.4
+creating dist-newstyle/build/x86_64-linux
+creating dist-newstyle/build/x86_64-linux/ghc-9.8.4
+creating dist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0
+creating dist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l
+creating dist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l/x
+creating
+/home/x/i/v/repro/cabal-bug/dist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l/x/cache
+creating dist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l/y
+creating
+/home/x/i/v/repro/cabal-bug/dist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l/y/cache
+Using self-exec internal setup method with build-type Simple and args:
+Using self-exec internal setup method with build-type Simple and args:
+["act-as-setup","--build-type=Simple","--","--working-dir=/home/x/i/v/repro/cabal-bug/.","configure","--verbose=2","--builddir=dist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l/y","--ghc","--prefix=/home/x/.cabal","--bindir=/home/x/.cabal/bin","--libdir=/home/x/.cabal/lib/x86_64-linux-ghc-9.8.4-inplace/foo-0.1.0.0-inplace-y","--libsubdir=","--dynlibdir=/home/x/.cabal/lib/x86_64-linux-ghc-9.8.4-inplace","--libexecdir=/home/x/.cabal/libexec/x86_64-linux-ghc-9.8.4-inplace/foo-0.1.0.0","--libexecsubdir=","--datadir=/home/x/.cabal/share/x86_64-linux-ghc-9.8.4-inplace/foo-0.1.0.0","--datasubdir=","--docdir=/home/x/.cabal/share/doc/x86_64-linux-ghc-9.8.4-inplace/foo-0.1.0.0","--htmldir=/home/x/.cabal/share/doc/x86_64-linux-ghc-9.8.4-inplace/foo-0.1.0.0/html","--haddockdir=/home/x/.cabal/share/doc/x86_64-linux-ghc-9.8.4-inplace/foo-0.1.0.0/html","--sysconfdir=/home/x/.cabal/etc","--enable-library-vanilla","--disable-library-profiling","--enable-shared","--disable-static","--disable-executable-dynamic","--disable-executable-static","--disable-profiling","--disable-profiling-shared","--profiling-detail=default","--library-profiling-detail=default","--enable-optimization","--disable-debug-info","--disable-build-info","--disable-library-for-ghci","--disable-split-sections","--disable-split-objs","--disable-executable-stripping","--disable-library-stripping","--package-db=clear","--package-db=global","--package-db=/home/x/.local/state/cabal/store/ghc-9.8.4-inplace/package.db","--package-db=/home/x/i/v/repro/cabal-bug/dist-newstyle/packagedb/ghc-9.8.4","--cid=foo-0.1.0.0-inplace-y","--dependency=base=base-4.19.2.0-inplace","--disable-coverage","--exact-configuration","--disable-relocatable","--with-ar=/nix/store/xxwkjlfikd5q8nnpyysnx4dla8r54w56-binutils-wrapper-2.43.1/bin/ar","--with-gcc=/nix/store/591apldfgm1gr238rbfc8ib0y1z8ng2y-gcc-wrapper-14-20241116/bin/cc","--with-ghc=/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/ghc","--with-ghc-pkg=/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/ghc-pkg-9.8.4","--with-haddock=/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/haddock-ghc-9.8.4","--with-hpc=/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/hpc-ghc-9.8.4","--with-hsc2hs=/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/hsc2hs-ghc-9.8.4","--with-ld=/nix/store/xxwkjlfikd5q8nnpyysnx4dla8r54w56-binutils-wrapper-2.43.1/bin/ld.gold","--with-runghc=/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/runghc-9.8.4","--with-strip=/nix/store/591apldfgm1gr238rbfc8ib0y1z8ng2y-gcc-wrapper-14-20241116/bin/strip","--with-tar=/nix/store/s6zpdhyi00867afvsyg8hf54q5llkffl-gnutar-1.35/bin/tar","--ghc-option=-hide-all-packages","lib:y"]
+/nix/store/81j9lximsskg386b0qya6dn3g1dnkrdm-cabal-install-3.14.1.0/bin/.cabal-wrapped
+act-as-setup --build-type=Simple --
+--working-dir=/home/x/i/v/repro/cabal-bug/. configure --verbose=2
+--builddir=dist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l/y --ghc
+--prefix=/home/x/.cabal --bindir=/home/x/.cabal/bin
+--libdir=/home/x/.cabal/lib/x86_64-linux-ghc-9.8.4-inplace/foo-0.1.0.0-inplace-y
+--libsubdir= --dynlibdir=/home/x/.cabal/lib/x86_64-linux-ghc-9.8.4-inplace
+--libexecdir=/home/x/.cabal/libexec/x86_64-linux-ghc-9.8.4-inplace/foo-0.1.0.0
+--libexecsubdir=
+--datadir=/home/x/.cabal/share/x86_64-linux-ghc-9.8.4-inplace/foo-0.1.0.0
+--datasubdir=
+--docdir=/home/x/.cabal/share/doc/x86_64-linux-ghc-9.8.4-inplace/foo-0.1.0.0
+--htmldir=/home/x/.cabal/share/doc/x86_64-linux-ghc-9.8.4-inplace/foo-0.1.0.0/html
+--haddockdir=/home/x/.cabal/share/doc/x86_64-linux-ghc-9.8.4-inplace/foo-0.1.0.0/html
+--sysconfdir=/home/x/.cabal/etc --enable-library-vanilla
+--disable-library-profiling --enable-shared --disable-static
+--disable-executable-dynamic --disable-executable-static --disable-profiling
+--disable-profiling-shared --profiling-detail=default
+--library-profiling-detail=default --enable-optimization --disable-debug-info
+--disable-build-info --disable-library-for-ghci --disable-split-sections
+--disable-split-objs --disable-executable-stripping
+--disable-library-stripping --package-db=clear --package-db=global
+--package-db=/home/x/.local/state/cabal/store/ghc-9.8.4-inplace/package.db
+--package-db=/home/x/i/v/repro/cabal-bug/dist-newstyle/packagedb/ghc-9.8.4
+--cid=foo-0.1.0.0-inplace-y --dependency=base=base-4.19.2.0-inplace
+--disable-coverage --exact-configuration --disable-relocatable
+--with-ar=/nix/store/xxwkjlfikd5q8nnpyysnx4dla8r54w56-binutils-wrapper-2.43.1/bin/ar
+--with-gcc=/nix/store/591apldfgm1gr238rbfc8ib0y1z8ng2y-gcc-wrapper-14-20241116/bin/cc
+--with-ghc=/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/ghc
+--with-ghc-pkg=/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/ghc-pkg-9.8.4
+--with-haddock=/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/haddock-ghc-9.8.4
+--with-hpc=/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/hpc-ghc-9.8.4
+--with-hsc2hs=/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/hsc2hs-ghc-9.8.4
+--with-ld=/nix/store/xxwkjlfikd5q8nnpyysnx4dla8r54w56-binutils-wrapper-2.43.1/bin/ld.gold
+--with-runghc=/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/runghc-9.8.4
+--with-strip=/nix/store/591apldfgm1gr238rbfc8ib0y1z8ng2y-gcc-wrapper-14-20241116/bin/strip
+--with-tar=/nix/store/s6zpdhyi00867afvsyg8hf54q5llkffl-gnutar-1.35/bin/tar
+--ghc-option=-hide-all-packages lib:y
+["act-as-setup","--build-type=Simple","--","--working-dir=/home/x/i/v/repro/cabal-bug/.","configure","--verbose=2","--builddir=dist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l/x","--ghc","--prefix=/home/x/.cabal","--bindir=/home/x/.cabal/bin","--libdir=/home/x/.cabal/lib/x86_64-linux-ghc-9.8.4-inplace/foo-0.1.0.0-inplace-x","--libsubdir=","--dynlibdir=/home/x/.cabal/lib/x86_64-linux-ghc-9.8.4-inplace","--libexecdir=/home/x/.cabal/libexec/x86_64-linux-ghc-9.8.4-inplace/foo-0.1.0.0","--libexecsubdir=","--datadir=/home/x/.cabal/share/x86_64-linux-ghc-9.8.4-inplace/foo-0.1.0.0","--datasubdir=","--docdir=/home/x/.cabal/share/doc/x86_64-linux-ghc-9.8.4-inplace/foo-0.1.0.0","--htmldir=/home/x/.cabal/share/doc/x86_64-linux-ghc-9.8.4-inplace/foo-0.1.0.0/html","--haddockdir=/home/x/.cabal/share/doc/x86_64-linux-ghc-9.8.4-inplace/foo-0.1.0.0/html","--sysconfdir=/home/x/.cabal/etc","--enable-library-vanilla","--disable-library-profiling","--enable-shared","--disable-static","--disable-executable-dynamic","--disable-executable-static","--disable-profiling","--disable-profiling-shared","--profiling-detail=default","--library-profiling-detail=default","--enable-optimization","--disable-debug-info","--disable-build-info","--disable-library-for-ghci","--disable-split-sections","--disable-split-objs","--disable-executable-stripping","--disable-library-stripping","--package-db=clear","--package-db=global","--package-db=/home/x/.local/state/cabal/store/ghc-9.8.4-inplace/package.db","--package-db=/home/x/i/v/repro/cabal-bug/dist-newstyle/packagedb/ghc-9.8.4","--cid=foo-0.1.0.0-inplace-x","--dependency=base=base-4.19.2.0-inplace","--disable-coverage","--exact-configuration","--disable-relocatable","--with-ar=/nix/store/xxwkjlfikd5q8nnpyysnx4dla8r54w56-binutils-wrapper-2.43.1/bin/ar","--with-gcc=/nix/store/591apldfgm1gr238rbfc8ib0y1z8ng2y-gcc-wrapper-14-20241116/bin/cc","--with-ghc=/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/ghc","--with-ghc-pkg=/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/ghc-pkg-9.8.4","--with-haddock=/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/haddock-ghc-9.8.4","--with-hpc=/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/hpc-ghc-9.8.4","--with-hsc2hs=/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/hsc2hs-ghc-9.8.4","--with-ld=/nix/store/xxwkjlfikd5q8nnpyysnx4dla8r54w56-binutils-wrapper-2.43.1/bin/ld.gold","--with-runghc=/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/runghc-9.8.4","--with-strip=/nix/store/591apldfgm1gr238rbfc8ib0y1z8ng2y-gcc-wrapper-14-20241116/bin/strip","--with-tar=/nix/store/s6zpdhyi00867afvsyg8hf54q5llkffl-gnutar-1.35/bin/tar","--ghc-option=-hide-all-packages","lib:x"]
+Including the following environment variable overrides:
+- foo_datadir=/home/x/i/v/repro/cabal-bug/./.
+/nix/store/81j9lximsskg386b0qya6dn3g1dnkrdm-cabal-install-3.14.1.0/bin/.cabal-wrapped
+- foo_datadir=/home/x/i/v/repro/cabal-bug/./.
+act-as-setup --build-type=Simple --
+- foo_datadir=/home/x/i/v/repro/cabal-bug/./.
+--working-dir=/home/x/i/v/repro/cabal-bug/. configure --verbose=2
+--builddir=dist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l/x --ghc
+--prefix=/home/x/.cabal --bindir=/home/x/.cabal/bin
+Running: /nix/store/81j9lximsskg386b0qya6dn3g1dnkrdm-cabal-install-3.14.1.0/bin/.cabal-wrapped act-as-setup '--build-type=Simple' -- '--working-dir=/home/x/i/v/repro/cabal-bug/.' configure '--verbose=2' '--builddir=dist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l/y' --ghc '--prefix=/home/x/.cabal' '--bindir=/home/x/.cabal/bin' '--libdir=/home/x/.cabal/lib/x86_64-linux-ghc-9.8.4-inplace/foo-0.1.0.0-inplace-y' '--libsubdir=' '--dynlibdir=/home/x/.cabal/lib/x86_64-linux-ghc-9.8.4-inplace' '--libexecdir=/home/x/.cabal/libexec/x86_64-linux-ghc-9.8.4-inplace/foo-0.1.0.0' '--libexecsubdir=' '--datadir=/home/x/.cabal/share/x86_64-linux-ghc-9.8.4-inplace/foo-0.1.0.0' '--datasubdir=' '--docdir=/home/x/.cabal/share/doc/x86_64-linux-ghc-9.8.4-inplace/foo-0.1.0.0' '--htmldir=/home/x/.cabal/share/doc/x86_64-linux-ghc-9.8.4-inplace/foo-0.1.0.0/html' '--haddockdir=/home/x/.cabal/share/doc/x86_64-linux-ghc-9.8.4-inplace/foo-0.1.0.0/html' '--sysconfdir=/home/x/.cabal/etc' --enable-library-vanilla --disable-library-profiling --enable-shared --disable-static --disable-executable-dynamic --disable-executable-static --disable-profiling --disable-profiling-shared '--profiling-detail=default' '--library-profiling-detail=default' --enable-optimization --disable-debug-info --disable-build-info --disable-library-for-ghci --disable-split-sections --disable-split-objs --disable-executable-stripping --disable-library-stripping '--package-db=clear' '--package-db=global' '--package-db=/home/x/.local/state/cabal/store/ghc-9.8.4-inplace/package.db' '--package-db=/home/x/i/v/repro/cabal-bug/dist-newstyle/packagedb/ghc-9.8.4' '--cid=foo-0.1.0.0-inplace-y' '--dependency=base=base-4.19.2.0-inplace' --disable-coverage --exact-configuration --disable-relocatable '--with-ar=/nix/store/xxwkjlfikd5q8nnpyysnx4dla8r54w56-binutils-wrapper-2.43.1/bin/ar' '--with-gcc=/nix/store/591apldfgm1gr238rbfc8ib0y1z8ng2y-gcc-wrapper-14-20241116/bin/cc' '--with-ghc=/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/ghc' '--with-ghc-pkg=/nix/store/yi5lb6mfx--libdir=/home/x/.cabal/lib/x86_64-linux-ghc-9.8.4-inplace/foo-0.1.0.0-inplace-x
+2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/ghc-pkg-9.8.4' '--with-haddock=/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/haddock-ghc-9.8.4' '--with-hpc=/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/hpc-ghc-9.8.4' '--with-hsc2hs=/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/hsc2hs-ghc-9.8.4' '--with-ld=/nix/store/xxwkjlfikd5q8nnpyysnx4dla8r54w56-binutils-wrapper-2.43.1/bin/ld.gold' '--with-runghc=/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/runghc-9.8.4' '--with-strip=/nix/store/591apldfgm1gr238rbfc8ib0y1z8ng2y-gcc-wrapper-14-20241116/bin/strip' '--with-tar=/nix/store/s6zpdhyi00867afvsyg8hf54q5llkffl-gnutar-1.35/bin/tar' '--ghc-option=-hide-all-packages' 'lib:y'
+--libsubdir= --dynlibdir=/home/x/.cabal/lib/x86_64-linux-ghc-9.8.4-inplace
+--libexecdir=/home/x/.cabal/libexec/x86_64-linux-ghc-9.8.4-inplace/foo-0.1.0.0
+--libexecsubdir=
+--datadir=/home/x/.cabal/share/x86_64-linux-ghc-9.8.4-inplace/foo-0.1.0.0
+--datasubdir=
+--docdir=/home/x/.cabal/share/doc/x86_64-linux-ghc-9.8.4-inplace/foo-0.1.0.0
+--htmldir=/home/x/.cabal/share/doc/x86_64-linux-ghc-9.8.4-inplace/foo-0.1.0.0/html
+--haddockdir=/home/x/.cabal/share/doc/x86_64-linux-ghc-9.8.4-inplace/foo-0.1.0.0/html
+--sysconfdir=/home/x/.cabal/etc --enable-library-vanilla
+--disable-library-profiling --enable-shared --disable-static
+--disable-executable-dynamic --disable-executable-static --disable-profiling
+--disable-profiling-shared --profiling-detail=default
+--library-profiling-detail=default --enable-optimization --disable-debug-info
+--disable-build-info --disable-library-for-ghci --disable-split-sections
+--disable-split-objs --disable-executable-stripping
+--disable-library-stripping --package-db=clear --package-db=global
+--package-db=/home/x/.local/state/cabal/store/ghc-9.8.4-inplace/package.db
+--package-db=/home/x/i/v/repro/cabal-bug/dist-newstyle/packagedb/ghc-9.8.4
+--cid=foo-0.1.0.0-inplace-x --dependency=base=base-4.19.2.0-inplace
+--disable-coverage --exact-configuration --disable-relocatable
+--with-ar=/nix/store/xxwkjlfikd5q8nnpyysnx4dla8r54w56-binutils-wrapper-2.43.1/bin/ar
+--with-gcc=/nix/store/591apldfgm1gr238rbfc8ib0y1z8ng2y-gcc-wrapper-14-20241116/bin/cc
+--with-ghc=/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/ghc
+--with-ghc-pkg=/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/ghc-pkg-9.8.4
+--with-haddock=/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/haddock-ghc-9.8.4
+--with-hpc=/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/hpc-ghc-9.8.4
+--with-hsc2hs=/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/hsc2hs-ghc-9.8.4
+--with-ld=/nix/store/xxwkjlfikd5q8nnpyysnx4dla8r54w56-binutils-wrapper-2.43.1/bin/ld.gold
+--with-runghc=/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/runghc-9.8.4
+--with-strip=/nix/store/591apldfgm1gr238rbfc8ib0y1z8ng2y-gcc-wrapper-14-20241116/bin/strip
+--with-tar=/nix/store/s6zpdhyi00867afvsyg8hf54q5llkffl-gnutar-1.35/bin/tar
+--ghc-option=-hide-all-packages lib:x
+Including the following environment variable overrides:
+- foo_datadir=/home/x/i/v/repro/cabal-bug/./.
+- foo_datadir=/home/x/i/v/repro/cabal-bug/./.
+- foo_datadir=/home/x/i/v/repro/cabal-bug/./.
+Running: /nix/store/81j9lximsskg386b0qya6dn3g1dnkrdm-cabal-install-3.14.1.0/bin/.cabal-wrapped act-as-setup '--build-type=Simple' -- '--working-dir=/home/x/i/v/repro/cabal-bug/.' configure '--verbose=2' '--builddir=dist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l/x' --ghc '--prefix=/home/x/.cabal' '--bindir=/home/x/.cabal/bin' '--libdir=/home/x/.cabal/lib/x86_64-linux-ghc-9.8.4-inplace/foo-0.1.0.0-inplace-x' '--libsubdir=' '--dynlibdir=/home/x/.cabal/lib/x86_64-linux-ghc-9.8.4-inplace' '--libexecdir=/home/x/.cabal/libexec/x86_64-linux-ghc-9.8.4-inplace/foo-0.1.0.0' '--libexecsubdir=' '--datadir=/home/x/.cabal/share/x86_64-linux-ghc-9.8.4-inplace/foo-0.1.0.0' '--datasubdir=' '--docdir=/home/x/.cabal/share/doc/x86_64-linux-ghc-9.8.4-inplace/foo-0.1.0.0' '--htmldir=/home/x/.cabal/share/doc/x86_64-linux-ghc-9.8.4-inplace/foo-0.1.0.0/html' '--haddockdir=/home/x/.cabal/share/doc/x86_64-linux-ghc-9.8.4-inplace/foo-0.1.0.0/html' '--sysconfdir=/home/x/.cabal/etc' --enable-library-vanilla --disable-library-profiling --enable-shared --disable-static --disable-executable-dynamic --disable-executable-static --disable-profiling --disable-profiling-shared '--profiling-detail=default' '--library-profiling-detail=default' --enable-optimization --disable-debug-info --disable-build-info --disable-library-for-ghci --disable-split-sections --disable-split-objs --disable-executable-stripping --disable-library-stripping '--package-db=clear' '--package-db=global' '--package-db=/home/x/.local/state/cabal/store/ghc-9.8.4-inplace/package.db' '--package-db=/home/x/i/v/repro/cabal-bug/dist-newstyle/packagedb/ghc-9.8.4' '--cid=foo-0.1.0.0-inplace-x' '--dependency=base=base-4.19.2.0-inplace' --disable-coverage --exact-configuration --disable-relocatable '--with-ar=/nix/store/xxwkjlfikd5q8nnpyysnx4dla8r54w56-binutils-wrapper-2.43.1/bin/ar' '--with-gcc=/nix/store/591apldfgm1gr238rbfc8ib0y1z8ng2y-gcc-wrapper-14-20241116/bin/cc' '--with-ghc=/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/ghc' '--with-ghc-pkg=/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/ghc-pkg-9.8.4' '--with-haddock=/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/haddock-ghc-9.8.4' '--with-hpc=/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/hpc-ghc-9.8.4' '--with-hsc2hs=/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/hsc2hs-ghc-9.8.4' '--with-ld=/nix/store/xxwkjlfikd5q8nnpyysnx4dla8r54w56-binutils-wrapper-2.43.1/bin/ld.gold' '--with-runghc=/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/runghc-9.8.4' '--with-strip=/nix/store/591apldfgm1gr238rbfc8ib0y1z8ng2y-gcc-wrapper-14-20241116/bin/strip' '--with-tar=/nix/store/s6zpdhyi00867afvsyg8hf54q5llkffl-gnutar-1.35/bin/tar' '--ghc-option=-hide-all-packages' 'lib:x'
+Using Parsec parser
+Configuring library 'y' for foo-0.1.0.0...
+Using Parsec parser
+Configuring library 'x' for foo-0.1.0.0...
+Dependency base ==4.19.2.0: using base-4.19.2.0
+Source component graph: component lib:y
+Configured component graph:
+    component foo-0.1.0.0-inplace-y include base-4.19.2.0-inplace
+Linked component graph:
+    unit foo-0.1.0.0-inplace-y
+        include base-4.19.2.0-inplace
+        Y=foo-0.1.0.0-inplace-y:Y
+Ready component graph:
+    definite foo-0.1.0.0-inplace-y depends base-4.19.2.0-inplace
+Using Cabal-3.14.1.0 compiled by ghc-9.6
+Using compiler: ghc-9.8.4
+Using install prefix: /home/x/.cabal
+Executables installed in: /home/x/.cabal/bin
+Libraries installed in:
+/home/x/.cabal/lib/x86_64-linux-ghc-9.8.4-inplace/foo-0.1.0.0-inplace-y
+Dynamic Libraries installed in:
+/home/x/.cabal/lib/x86_64-linux-ghc-9.8.4-inplace
+Private executables installed in:
+/home/x/.cabal/libexec/x86_64-linux-ghc-9.8.4-inplace/foo-0.1.0.0
+Data files installed in:
+/home/x/.cabal/share/x86_64-linux-ghc-9.8.4-inplace/foo-0.1.0.0
+Documentation installed in:
+/home/x/.cabal/share/doc/x86_64-linux-ghc-9.8.4-inplace/foo-0.1.0.0
+Configuration files installed in: /home/x/.cabal/etc
+No alex found
+Using ar given by user at:
+/nix/store/xxwkjlfikd5q8nnpyysnx4dla8r54w56-binutils-wrapper-2.43.1/bin/ar
+No c2hs found
+No cpphs found
+No doctest found
+Using gcc version 14.2.1 given by user at:
+/nix/store/591apldfgm1gr238rbfc8ib0y1z8ng2y-gcc-wrapper-14-20241116/bin/cc
+Using ghc version 9.8.4 given by user at:
+/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/ghc
+Using ghc-pkg version 9.8.4 given by user at:
+/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/ghc-pkg-9.8.4
+No ghcjs found
+No ghcjs-pkg found
+No greencard found
+Using haddock version 2.30.0 given by user at:
+/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/haddock-ghc-9.8.4
+No happy found
+No haskell-suite found
+No haskell-suite-pkg found
+No hmake found
+Using hpc version 0.69 given by user at:
+/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/hpc-ghc-9.8.4
+Using hsc2hs version 0.68.10 given by user at:
+/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/hsc2hs-ghc-9.8.4
+No hscolour found
+No jhc found
+Using ld given by user at:
+/nix/store/xxwkjlfikd5q8nnpyysnx4dla8r54w56-binutils-wrapper-2.43.1/bin/ld.gold
+No pkg-config found
+Using runghc version 9.8.4 given by user at:
+/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/runghc-9.8.4
+Using strip version 2.43 given by user at:
+/nix/store/591apldfgm1gr238rbfc8ib0y1z8ng2y-gcc-wrapper-14-20241116/bin/strip
+Using tar given by user at:
+/nix/store/s6zpdhyi00867afvsyg8hf54q5llkffl-gnutar-1.35/bin/tar
+No uhc found
+Dependency base ==4.19.2.0: using base-4.19.2.0
+Source component graph: component lib:x
+Configured component graph:
+    component foo-0.1.0.0-inplace-x include base-4.19.2.0-inplace
+Linked component graph:
+    unit foo-0.1.0.0-inplace-x
+        include base-4.19.2.0-inplace
+        X=foo-0.1.0.0-inplace-x:X
+Ready component graph:
+    definite foo-0.1.0.0-inplace-x depends base-4.19.2.0-inplace
+Using Cabal-3.14.1.0 compiled by ghc-9.6
+Using compiler: ghc-9.8.4
+Using install prefix: /home/x/.cabal
+Executables installed in: /home/x/.cabal/bin
+Libraries installed in:
+/home/x/.cabal/lib/x86_64-linux-ghc-9.8.4-inplace/foo-0.1.0.0-inplace-x
+Dynamic Libraries installed in:
+/home/x/.cabal/lib/x86_64-linux-ghc-9.8.4-inplace
+Private executables installed in:
+/home/x/.cabal/libexec/x86_64-linux-ghc-9.8.4-inplace/foo-0.1.0.0
+Data files installed in:
+/home/x/.cabal/share/x86_64-linux-ghc-9.8.4-inplace/foo-0.1.0.0
+Documentation installed in:
+/home/x/.cabal/share/doc/x86_64-linux-ghc-9.8.4-inplace/foo-0.1.0.0
+Configuration files installed in: /home/x/.cabal/etc
+No alex found
+Using ar given by user at:
+/nix/store/xxwkjlfikd5q8nnpyysnx4dla8r54w56-binutils-wrapper-2.43.1/bin/ar
+No c2hs found
+No cpphs found
+No doctest found
+Using gcc version 14.2.1 given by user at:
+/nix/store/591apldfgm1gr238rbfc8ib0y1z8ng2y-gcc-wrapper-14-20241116/bin/cc
+Using ghc version 9.8.4 given by user at:
+/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/ghc
+Using ghc-pkg version 9.8.4 given by user at:
+/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/ghc-pkg-9.8.4
+No ghcjs found
+No ghcjs-pkg found
+No greencard found
+Using haddock version 2.30.0 given by user at:
+/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/haddock-ghc-9.8.4
+No happy found
+No haskell-suite found
+No haskell-suite-pkg found
+No hmake found
+Using hpc version 0.69 given by user at:
+/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/hpc-ghc-9.8.4
+Using hsc2hs version 0.68.10 given by user at:
+/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/hsc2hs-ghc-9.8.4
+No hscolour found
+No jhc found
+Using ld given by user at:
+/nix/store/xxwkjlfikd5q8nnpyysnx4dla8r54w56-binutils-wrapper-2.43.1/bin/ld.gold
+No pkg-config found
+Using runghc version 9.8.4 given by user at:
+/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/runghc-9.8.4
+Using strip version 2.43 given by user at:
+/nix/store/591apldfgm1gr238rbfc8ib0y1z8ng2y-gcc-wrapper-14-20241116/bin/strip
+Using tar given by user at:
+/nix/store/s6zpdhyi00867afvsyg8hf54q5llkffl-gnutar-1.35/bin/tar
+No uhc found
+Using self-exec internal setup method with build-type Simple and args:
+["act-as-setup","--build-type=Simple","--","--working-dir=/home/x/i/v/repro/cabal-bug/.","build","--verbose=2","--builddir=dist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l/y"]
+/nix/store/81j9lximsskg386b0qya6dn3g1dnkrdm-cabal-install-3.14.1.0/bin/.cabal-wrapped
+act-as-setup --build-type=Simple --
+--working-dir=/home/x/i/v/repro/cabal-bug/. build --verbose=2
+--builddir=dist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l/y
+Including the following environment variable overrides:
+- foo_datadir=/home/x/i/v/repro/cabal-bug/./.
+- foo_datadir=/home/x/i/v/repro/cabal-bug/./.
+- foo_datadir=/home/x/i/v/repro/cabal-bug/./.
+Running: /nix/store/81j9lximsskg386b0qya6dn3g1dnkrdm-cabal-install-3.14.1.0/bin/.cabal-wrapped act-as-setup '--build-type=Simple' -- '--working-dir=/home/x/i/v/repro/cabal-bug/.' build '--verbose=2' '--builddir=dist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l/y'
+Component build order: library 'y'
+Running: /nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/ghc-pkg-9.8.4 init /home/x/i/v/repro/cabal-bug/./dist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l/y/package.conf.inplace
+whenReRegister: nothing to register
+Using self-exec internal setup method with build-type Simple and args:
+["act-as-setup","--build-type=Simple","--","--working-dir=/home/x/i/v/repro/cabal-bug/.","repl","--verbose=2","--builddir=dist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l/x","--repl-multi-file=/home/x/i/v/repro/cabal-bug/dist-newstyle/multi-out-1167595","lib:x"]
+/nix/store/81j9lximsskg386b0qya6dn3g1dnkrdm-cabal-install-3.14.1.0/bin/.cabal-wrapped
+act-as-setup --build-type=Simple --
+--working-dir=/home/x/i/v/repro/cabal-bug/. repl --verbose=2
+--builddir=dist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l/x
+--repl-multi-file=/home/x/i/v/repro/cabal-bug/dist-newstyle/multi-out-1167595
+lib:x
+Including the following environment variable overrides:
+- foo_datadir=/home/x/i/v/repro/cabal-bug/./.
+- foo_datadir=/home/x/i/v/repro/cabal-bug/./.
+- foo_datadir=/home/x/i/v/repro/cabal-bug/./.
+Running: /nix/store/81j9lximsskg386b0qya6dn3g1dnkrdm-cabal-install-3.14.1.0/bin/.cabal-wrapped act-as-setup '--build-type=Simple' -- '--working-dir=/home/x/i/v/repro/cabal-bug/.' repl '--verbose=2' '--builddir=dist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l/x' '--repl-multi-file=/home/x/i/v/repro/cabal-bug/dist-newstyle/multi-out-1167595' 'lib:x'
+creating
+/home/x/i/v/repro/cabal-bug/dist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l/y/build/y
+creating
+/home/x/i/v/repro/cabal-bug/dist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l/y/build/y/autogen
+creating
+/home/x/i/v/repro/cabal-bug/dist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l/y/build/y/autogen
+creating
+/home/x/i/v/repro/cabal-bug/dist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l/y/build/y/autogen
+creating
+/home/x/i/v/repro/cabal-bug/dist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l/y/build/y/autogen
+Preprocessing library 'y' for foo-0.1.0.0...
+Building library 'y' for foo-0.1.0.0...
+creating
+/home/x/i/v/repro/cabal-bug/dist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l/y/build/y
+creating
+/home/x/i/v/repro/cabal-bug/dist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l/y/build/y
+Wanted module build ways(library 'y'): [DynWay,StaticWay]
+Final module build ways(library 'y'): [DynWay,StaticWay]
+Running: /nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/ghc --make -fbuilding-cabal-package -O -static -dynamic-too -dynosuf dyn_o -dynhisuf dyn_hi -outputdir dist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l/y/build/y -odir dist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l/y/build/y -hidir dist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l/y/build/y -hiedir dist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l/y/build/y/extra-compilation-artifacts/hie -stubdir dist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l/y/build/y -i -icomponents/y -idist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l/y/build/y -idist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l/y/build/y/autogen -idist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l/y/build/global-autogen -Idist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l/y/build/y/autogen -Idist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l/y/build/global-autogen -Idist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l/y/build/y -optP-include -optPdist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l/y/build/y/autogen/cabal_macros.h -this-unit-id foo-0.1.0.0-inplace-y -hide-all-packages -Wmissing-home-modules -no-user-package-db -package-db /home/x/.local/state/cabal/store/ghc-9.8.4-inplace/package.db -package-db /home/x/i/v/repro/cabal-bug/dist-newstyle/packagedb/ghc-9.8.4 -package-db dist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l/y/package.conf.inplace -package-id base-4.19.2.0-inplace -XHaskell2010 Y -hide-all-packages
+Running: /nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/ghc-pkg-9.8.4 init /home/x/i/v/repro/cabal-bug/./dist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l/x/package.conf.inplace
+creating
+/home/x/i/v/repro/cabal-bug/dist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l/x/build/x
+creating
+/home/x/i/v/repro/cabal-bug/dist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l/x/build/x/autogen
+creating
+/home/x/i/v/repro/cabal-bug/dist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l/x/build/x/autogen
+creating
+/home/x/i/v/repro/cabal-bug/dist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l/x/build/x/autogen
+creating
+/home/x/i/v/repro/cabal-bug/dist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l/x/build/x/autogen
+Preprocessing library 'x' for foo-0.1.0.0...
+creating
+/home/x/i/v/repro/cabal-bug/dist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l/x/build/x
+creating
+/home/x/i/v/repro/cabal-bug/dist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l/x/build/x
+Wanted module build ways(library 'x'): [DynWay,StaticWay]
+Final module build ways(library 'x'): [DynWay,StaticWay]
+[1 of 1] Compiling Y                ( components/y/Y.hs, dist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l/y/build/y/Y.o, dist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l/y/build/y/Y.dyn_o )
+Linking...
+[(DefiniteUnitId (DefUnitId {unDefUnitId = UnitId
+"base-4.19.2.0-inplace"}),DefaultRenaming)]
+Running: /nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/ghc -shared -dynamic '-dynload deploy' -optl-Wl,-rpath,/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/lib/ghc-9.8.4/lib/x86_64-linux-ghc-9.8.4 -optl-Wl,-rpath,/nix/store/4yv04mylgabfi1vdnl0cr83q5qax4ch7-gmp-with-cxx-6.3.0/lib -optl-Wl,-rpath,/nix/store/anj79qqjcz0g69qp032jkmq2ka30x88b-elfutils-0.192/lib -optl-Wl,-rpath,/nix/store/af26rdavng72z6qi08p52jhg5qynlg7n-libffi-3.4.6/lib -this-unit-id foo-0.1.0.0-inplace-y -hide-all-packages -no-auto-link-packages -no-user-package-db -package-db /home/x/.local/state/cabal/store/ghc-9.8.4-inplace/package.db -package-db /home/x/i/v/repro/cabal-bug/dist-newstyle/packagedb/ghc-9.8.4 -package-db dist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l/y/package.conf.inplace -package-id base-4.19.2.0-inplace dist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l/y/build/y/Y.dyn_o -o dist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l/y/build/y/libHSfoo-0.1.0.0-inplace-y-ghc9.8.4.so -hide-all-packages
+Running: /nix/store/xxwkjlfikd5q8nnpyysnx4dla8r54w56-binutils-wrapper-2.43.1/bin/ar -r dist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l/y/build/y/objs-1167872/libHSfoo-0.1.0.0-inplace-y.a '@dist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l/y/build/y/objs-1167872/ar1167872-3.rsp'
+/nix/store/xxwkjlfikd5q8nnpyysnx4dla8r54w56-binutils-wrapper-2.43.1/bin/ar: creating dist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l/y/build/y/objs-1167872/libHSfoo-0.1.0.0-inplace-y.a
+Using self-exec internal setup method with build-type Simple and args:
+["act-as-setup","--build-type=Simple","--","--working-dir=/home/x/i/v/repro/cabal-bug/.","register","--verbose=2","--builddir=dist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l/y","--inplace","--gen-pkg-config=/home/x/i/v/repro/cabal-bug/dist-newstyle/tmp/package-registration--1167595/pkgConf"]
+/nix/store/81j9lximsskg386b0qya6dn3g1dnkrdm-cabal-install-3.14.1.0/bin/.cabal-wrapped
+act-as-setup --build-type=Simple --
+--working-dir=/home/x/i/v/repro/cabal-bug/. register --verbose=2
+--builddir=dist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l/y
+--inplace
+--gen-pkg-config=/home/x/i/v/repro/cabal-bug/dist-newstyle/tmp/package-registration--1167595/pkgConf
+Including the following environment variable overrides:
+- foo_datadir=/home/x/i/v/repro/cabal-bug/./.
+- foo_datadir=/home/x/i/v/repro/cabal-bug/./.
+- foo_datadir=/home/x/i/v/repro/cabal-bug/./.
+Running: /nix/store/81j9lximsskg386b0qya6dn3g1dnkrdm-cabal-install-3.14.1.0/bin/.cabal-wrapped act-as-setup '--build-type=Simple' -- '--working-dir=/home/x/i/v/repro/cabal-bug/.' register '--verbose=2' '--builddir=dist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l/y' --inplace '--gen-pkg-config=/home/x/i/v/repro/cabal-bug/dist-newstyle/tmp/package-registration--1167595/pkgConf'
+name: z-foo-z-y
+version: 0.1.0.0
+package-name: foo
+lib-name: y
+id: foo-0.1.0.0-inplace-y
+key: foo-0.1.0.0-inplace-y
+abi: inplace
+exposed-modules: Y
+import-dirs:
+/home/x/i/v/repro/cabal-bug/dist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l/y/build/y
+
+library-dirs:
+/home/x/i/v/repro/cabal-bug/dist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l/y/build/y
+
+library-dirs-static:
+/home/x/i/v/repro/cabal-bug/dist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l/y/build/y
+
+dynamic-library-dirs:
+/home/x/i/v/repro/cabal-bug/dist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l/y/build/y
+
+data-dir: /home/x/i/v/repro/cabal-bug/.
+hs-libraries: HSfoo-0.1.0.0-inplace-y
+depends: base-4.19.2.0-inplace
+haddock-interfaces:
+/home/x/i/v/repro/cabal-bug/dist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l/y/doc/html/foo/y.haddock
+
+haddock-html:
+/home/x/i/v/repro/cabal-bug/dist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l/y/doc/html/foo
+Creating package registration file:
+/home/x/i/v/repro/cabal-bug/dist-newstyle/tmp/package-registration--1167595/pkgConf
+Running: /nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/ghc-pkg-9.8.4 update - --global --no-user-package-db '--package-db=/home/x/.local/state/cabal/store/ghc-9.8.4-inplace/package.db' '--package-db=/home/x/i/v/repro/cabal-bug/dist-newstyle/packagedb/ghc-9.8.4'
+creating dist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l/z
+creating
+/home/x/i/v/repro/cabal-bug/dist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l/z/cache
+Using self-exec internal setup method with build-type Simple and args:
+["act-as-setup","--build-type=Simple","--","--working-dir=/home/x/i/v/repro/cabal-bug/.","configure","--verbose=2","--builddir=dist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l/z","--ghc","--prefix=/home/x/.cabal","--bindir=/home/x/.cabal/bin","--libdir=/home/x/.cabal/lib/x86_64-linux-ghc-9.8.4-inplace/foo-0.1.0.0-inplace-z","--libsubdir=","--dynlibdir=/home/x/.cabal/lib/x86_64-linux-ghc-9.8.4-inplace","--libexecdir=/home/x/.cabal/libexec/x86_64-linux-ghc-9.8.4-inplace/foo-0.1.0.0","--libexecsubdir=","--datadir=/home/x/.cabal/share/x86_64-linux-ghc-9.8.4-inplace/foo-0.1.0.0","--datasubdir=","--docdir=/home/x/.cabal/share/doc/x86_64-linux-ghc-9.8.4-inplace/foo-0.1.0.0","--htmldir=/home/x/.cabal/share/doc/x86_64-linux-ghc-9.8.4-inplace/foo-0.1.0.0/html","--haddockdir=/home/x/.cabal/share/doc/x86_64-linux-ghc-9.8.4-inplace/foo-0.1.0.0/html","--sysconfdir=/home/x/.cabal/etc","--enable-library-vanilla","--disable-library-profiling","--enable-shared","--disable-static","--disable-executable-dynamic","--disable-executable-static","--disable-profiling","--disable-profiling-shared","--profiling-detail=default","--library-profiling-detail=default","--enable-optimization","--disable-debug-info","--disable-build-info","--disable-library-for-ghci","--disable-split-sections","--disable-split-objs","--disable-executable-stripping","--disable-library-stripping","--package-db=clear","--package-db=global","--package-db=/home/x/.local/state/cabal/store/ghc-9.8.4-inplace/package.db","--package-db=/home/x/i/v/repro/cabal-bug/dist-newstyle/packagedb/ghc-9.8.4","--cid=foo-0.1.0.0-inplace-z","--dependency=base=base-4.19.2.0-inplace","--dependency=foo:y=foo-0.1.0.0-inplace-y","--promised-dependency=foo-0.1.0.0:x=foo-0.1.0.0-inplace-x","--disable-coverage","--exact-configuration","--disable-relocatable","--coverage-for=foo-0.1.0.0-inplace-x","--coverage-for=foo-0.1.0.0-inplace-y","--coverage-for=foo-0.1.0.0-inplace-z","--with-ar=/nix/store/xxwkjlfikd5q8nnpyysnx4dla8r54w56-binutils-wrapper-2.43.1/bin/ar","--with-gcc=/nix/store/591apldfgm1gr238rbfc8ib0y1z8ng2y-gcc-wrapper-14-20241116/bin/cc","--with-ghc=/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/ghc","--with-ghc-pkg=/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/ghc-pkg-9.8.4","--with-haddock=/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/haddock-ghc-9.8.4","--with-hpc=/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/hpc-ghc-9.8.4","--with-hsc2hs=/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/hsc2hs-ghc-9.8.4","--with-ld=/nix/store/xxwkjlfikd5q8nnpyysnx4dla8r54w56-binutils-wrapper-2.43.1/bin/ld.gold","--with-runghc=/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/runghc-9.8.4","--with-strip=/nix/store/591apldfgm1gr238rbfc8ib0y1z8ng2y-gcc-wrapper-14-20241116/bin/strip","--with-tar=/nix/store/s6zpdhyi00867afvsyg8hf54q5llkffl-gnutar-1.35/bin/tar","--ghc-option=-hide-all-packages","lib:z"]
+/nix/store/81j9lximsskg386b0qya6dn3g1dnkrdm-cabal-install-3.14.1.0/bin/.cabal-wrapped
+act-as-setup --build-type=Simple --
+--working-dir=/home/x/i/v/repro/cabal-bug/. configure --verbose=2
+--builddir=dist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l/z --ghc
+--prefix=/home/x/.cabal --bindir=/home/x/.cabal/bin
+--libdir=/home/x/.cabal/lib/x86_64-linux-ghc-9.8.4-inplace/foo-0.1.0.0-inplace-z
+--libsubdir= --dynlibdir=/home/x/.cabal/lib/x86_64-linux-ghc-9.8.4-inplace
+--libexecdir=/home/x/.cabal/libexec/x86_64-linux-ghc-9.8.4-inplace/foo-0.1.0.0
+--libexecsubdir=
+--datadir=/home/x/.cabal/share/x86_64-linux-ghc-9.8.4-inplace/foo-0.1.0.0
+--datasubdir=
+--docdir=/home/x/.cabal/share/doc/x86_64-linux-ghc-9.8.4-inplace/foo-0.1.0.0
+--htmldir=/home/x/.cabal/share/doc/x86_64-linux-ghc-9.8.4-inplace/foo-0.1.0.0/html
+--haddockdir=/home/x/.cabal/share/doc/x86_64-linux-ghc-9.8.4-inplace/foo-0.1.0.0/html
+--sysconfdir=/home/x/.cabal/etc --enable-library-vanilla
+--disable-library-profiling --enable-shared --disable-static
+--disable-executable-dynamic --disable-executable-static --disable-profiling
+--disable-profiling-shared --profiling-detail=default
+--library-profiling-detail=default --enable-optimization --disable-debug-info
+--disable-build-info --disable-library-for-ghci --disable-split-sections
+--disable-split-objs --disable-executable-stripping
+--disable-library-stripping --package-db=clear --package-db=global
+--package-db=/home/x/.local/state/cabal/store/ghc-9.8.4-inplace/package.db
+--package-db=/home/x/i/v/repro/cabal-bug/dist-newstyle/packagedb/ghc-9.8.4
+--cid=foo-0.1.0.0-inplace-z --dependency=base=base-4.19.2.0-inplace
+--dependency=foo:y=foo-0.1.0.0-inplace-y
+--promised-dependency=foo-0.1.0.0:x=foo-0.1.0.0-inplace-x --disable-coverage
+--exact-configuration --disable-relocatable
+--coverage-for=foo-0.1.0.0-inplace-x --coverage-for=foo-0.1.0.0-inplace-y
+--coverage-for=foo-0.1.0.0-inplace-z
+--with-ar=/nix/store/xxwkjlfikd5q8nnpyysnx4dla8r54w56-binutils-wrapper-2.43.1/bin/ar
+--with-gcc=/nix/store/591apldfgm1gr238rbfc8ib0y1z8ng2y-gcc-wrapper-14-20241116/bin/cc
+--with-ghc=/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/ghc
+--with-ghc-pkg=/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/ghc-pkg-9.8.4
+--with-haddock=/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/haddock-ghc-9.8.4
+--with-hpc=/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/hpc-ghc-9.8.4
+--with-hsc2hs=/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/hsc2hs-ghc-9.8.4
+--with-ld=/nix/store/xxwkjlfikd5q8nnpyysnx4dla8r54w56-binutils-wrapper-2.43.1/bin/ld.gold
+--with-runghc=/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/runghc-9.8.4
+--with-strip=/nix/store/591apldfgm1gr238rbfc8ib0y1z8ng2y-gcc-wrapper-14-20241116/bin/strip
+--with-tar=/nix/store/s6zpdhyi00867afvsyg8hf54q5llkffl-gnutar-1.35/bin/tar
+--ghc-option=-hide-all-packages lib:z
+Including the following environment variable overrides:
+- foo_datadir=/home/x/i/v/repro/cabal-bug/./.
+- foo_datadir=/home/x/i/v/repro/cabal-bug/./.
+- foo_datadir=/home/x/i/v/repro/cabal-bug/./.
+Running: /nix/store/81j9lximsskg386b0qya6dn3g1dnkrdm-cabal-install-3.14.1.0/bin/.cabal-wrapped act-as-setup '--build-type=Simple' -- '--working-dir=/home/x/i/v/repro/cabal-bug/.' configure '--verbose=2' '--builddir=dist-newstyle/build/x86_64-linux/ghc-9.8.4/foo-0.1.0.0/l/z' --ghc '--prefix=/home/x/.cabal' '--bindir=/home/x/.cabal/bin' '--libdir=/home/x/.cabal/lib/x86_64-linux-ghc-9.8.4-inplace/foo-0.1.0.0-inplace-z' '--libsubdir=' '--dynlibdir=/home/x/.cabal/lib/x86_64-linux-ghc-9.8.4-inplace' '--libexecdir=/home/x/.cabal/libexec/x86_64-linux-ghc-9.8.4-inplace/foo-0.1.0.0' '--libexecsubdir=' '--datadir=/home/x/.cabal/share/x86_64-linux-ghc-9.8.4-inplace/foo-0.1.0.0' '--datasubdir=' '--docdir=/home/x/.cabal/share/doc/x86_64-linux-ghc-9.8.4-inplace/foo-0.1.0.0' '--htmldir=/home/x/.cabal/share/doc/x86_64-linux-ghc-9.8.4-inplace/foo-0.1.0.0/html' '--haddockdir=/home/x/.cabal/share/doc/x86_64-linux-ghc-9.8.4-inplace/foo-0.1.0.0/html' '--sysconfdir=/home/x/.cabal/etc' --enable-library-vanilla --disable-library-profiling --enable-shared --disable-static --disable-executable-dynamic --disable-executable-static --disable-profiling --disable-profiling-shared '--profiling-detail=default' '--library-profiling-detail=default' --enable-optimization --disable-debug-info --disable-build-info --disable-library-for-ghci --disable-split-sections --disable-split-objs --disable-executable-stripping --disable-library-stripping '--package-db=clear' '--package-db=global' '--package-db=/home/x/.local/state/cabal/store/ghc-9.8.4-inplace/package.db' '--package-db=/home/x/i/v/repro/cabal-bug/dist-newstyle/packagedb/ghc-9.8.4' '--cid=foo-0.1.0.0-inplace-z' '--dependency=base=base-4.19.2.0-inplace' '--dependency=foo:y=foo-0.1.0.0-inplace-y' '--promised-dependency=foo-0.1.0.0:x=foo-0.1.0.0-inplace-x' --disable-coverage --exact-configuration --disable-relocatable '--coverage-for=foo-0.1.0.0-inplace-x' '--coverage-for=foo-0.1.0.0-inplace-y' '--coverage-for=foo-0.1.0.0-inplace-z' '--with-ar=/nix/store/xxwkjlfikd5q8nnpyysnx4dla8r54w56-binutils-wrapper-2.43.1/bin/ar' '--with-gcc=/nix/store/591apldfgm1gr238rbfc8ib0y1z8ng2y-gcc-wrapper-14-20241116/bin/cc' '--with-ghc=/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/ghc' '--with-ghc-pkg=/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/ghc-pkg-9.8.4' '--with-haddock=/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/haddock-ghc-9.8.4' '--with-hpc=/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/hpc-ghc-9.8.4' '--with-hsc2hs=/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/hsc2hs-ghc-9.8.4' '--with-ld=/nix/store/xxwkjlfikd5q8nnpyysnx4dla8r54w56-binutils-wrapper-2.43.1/bin/ld.gold' '--with-runghc=/nix/store/yi5lb6mfx2xfda2r5ilz3z6qsvgfv930-ghc-9.8.4/bin/runghc-9.8.4' '--with-strip=/nix/store/591apldfgm1gr238rbfc8ib0y1z8ng2y-gcc-wrapper-14-20241116/bin/strip' '--with-tar=/nix/store/s6zpdhyi00867afvsyg8hf54q5llkffl-gnutar-1.35/bin/tar' '--ghc-option=-hide-all-packages' 'lib:z'
+Using Parsec parser
+Configuring library 'z' for foo-0.1.0.0...
+Dependency base ==4.19.2.0: using base-4.19.2.0
+Dependency foo:{x, y} ==0.1.0.0: using foo-0.1.0.0
+Dependency foo:{x, y} ==0.1.0.0: using foo-0.1.0.0
+Source component graph:
+    component lib:z
+        dependency lib:x
+        dependency lib:y
+CallStack (from HasCallStack):
+  withMetadata, called at src/Distribution/Simple/Utils.hs:447:12 in Cabal-3.14.1.0-D1Wm8iEtMgMGJPyqolxiUU:Distribution.Simple.Utils
+Error: Dependency on unbuildable library 'x' from foo
+
+Error: [Cabal-7125]
+Failed to build foo-0.1.0.0-inplace-z. The failure occurred during the configure step.
+CallStack (from HasCallStack):
+  dieWithException, called at src/Distribution/Client/ProjectOrchestration.hs:1241:21 in cabal-install-3.14.1.0-8L36k8NqEOc1Mv909KJFhD:Distribution.Client.ProjectOrchestration
+
